@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <!-- Phosphor Icons CDN -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <!-- Fontawesome Icons CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -118,7 +120,7 @@
         <!-- Solar -->
         <article class="card card--energy">
           <div class="card__icon-wrap card__icon-wrap--solar">
-            <img src="https://via.placeholder.com/56x56/A8D5A2/2D6A4F?text=☀" alt="" class="card__img-icon" aria-hidden="true" />
+            <i class="fa-solid fa-solar-panel"></i>
           </div>
           <h3 class="card__title">Energia Solare</h3>
           <p class="card__text">
@@ -132,7 +134,7 @@
         <!-- Wind -->
         <article class="card card--energy">
           <div class="card__icon-wrap card__icon-wrap--wind">
-            <img src="https://via.placeholder.com/56x56/B7D9E8/1B6CA8?text=💨" alt="" class="card__img-icon" aria-hidden="true" />
+            <i class="fa-solid fa-wind"></i>
           </div>
           <h3 class="card__title">Energia Eolica</h3>
           <p class="card__text">
@@ -145,7 +147,7 @@
         <!-- Biomass -->
         <article class="card card--energy">
           <div class="card__icon-wrap card__icon-wrap--biomass">
-            <img src="https://via.placeholder.com/56x56/C5E8B0/3A7D44?text=🌿" alt="" class="card__img-icon" aria-hidden="true" />
+            <i class="fa-solid fa-leaf"></i>
           </div>
           <h3 class="card__title">Biomassa</h3>
           <p class="card__text">
@@ -158,7 +160,7 @@
         <!-- Hydrogen -->
         <article class="card card--energy">
           <div class="card__icon-wrap card__icon-wrap--hydrogen">
-            <img src="https://via.placeholder.com/56x56/E8D5F5/6A3A9A?text=H₂" alt="" class="card__img-icon" aria-hidden="true" />
+            <i class="fa-solid fa-h"></i>
           </div>
           <h3 class="card__title">Idrogeno Verde</h3>
           <p class="card__text">
@@ -174,7 +176,7 @@
     <!-- ── BODY / ABOUT GREEN CHEMISTRY ──────────────────── -->
     <section class="body-section" aria-labelledby="aboutHeading">
       <div class="body-section__media">
-        <img src="https://via.placeholder.com/560x420/D4EDDA/2D6A4F?text=Green+Chemistry" alt="Illustrazione astratta di strutture molecolari sovrapposte a paesaggi naturali" class="body-section__img" />
+        <img src="assets/images/leaf.webp" alt="Illustrazione astratta di strutture molecolari sovrapposte a paesaggi naturali" class="body-section__img" />
         <div class="body-section__badge" aria-hidden="true">
           <span class="badge__number">12</span>
           <span class="badge__label">Principi Fondamentali</span>
@@ -220,27 +222,27 @@
         <div class="carousel__track" id="carouselTrack">
 
           <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Diapositiva 1 di 5">
-            <img src="https://via.placeholder.com/900x480/B5D8A8/2D6A4F?text=Laboratory+%E2%80%94+Green+Solvents" alt="Scienziato al lavoro con sistemi di solventi verdi in un laboratorio moderno" class="carousel__img" />
+            <img src="assets/images/scientist.webp" alt="Scienziato al lavoro con sistemi di solventi verdi in un laboratorio moderno" class="carousel__img" />
             <figcaption class="carousel__caption">Ricerca sui Solventi Verdi</figcaption>
           </figure>
 
           <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Diapositiva 2 di 5">
-            <img src="https://via.placeholder.com/900x480/A8C9D8/1B6CA8?text=Catalysis+%E2%80%94+Cleaner+Reactions" alt="Reattore catalitico per la sintesi chimica pulita" class="carousel__img" />
+            <img src="assets/images/reactor.webp" alt="Reattore catalitico per la sintesi chimica pulita" class="carousel__img" />
             <figcaption class="carousel__caption">Sintesi Catalitica Pulita</figcaption>
           </figure>
 
           <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Diapositiva 3 di 5">
-            <img src="https://via.placeholder.com/900x480/D8E8A8/3A7D44?text=Biorefineries+%E2%80%94+Waste+to+Value" alt="Bioraffineria che converte rifiuti agricoli in materie prime chimiche" class="carousel__img" />
+            <img src="assets/images/bioraffineria.webp" alt="Bioraffineria che converte rifiuti agricoli in materie prime chimiche" class="carousel__img" />
             <figcaption class="carousel__caption">Bioraffinerie - Dai Rifiuti al Valore</figcaption>
           </figure>
 
           <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Diapositiva 4 di 5">
-            <img src="https://via.placeholder.com/900x480/E8D8A8/9A6A00?text=Bioplastics+%E2%80%94+Beyond+Petroleum" alt="Pellet di bioplastica prodotti da materie prime vegetali" class="carousel__img" />
+            <img src="assets/images/pellet.webp" alt="Pellet di bioplastica prodotti da materie prime vegetali" class="carousel__img" />
             <figcaption class="carousel__caption">Bioplastiche Oltre il Petrolio</figcaption>
           </figure>
 
           <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Diapositiva 5 di 5">
-            <img src="https://via.placeholder.com/900x480/C8D8E8/2D4A6A?text=Solar+Photocatalysis" alt="Sistema di trattamento dell'acqua per fotocatalisi solare" class="carousel__img" />
+            <img src="assets/images/fotocatalisi.webp" alt="Sistema di trattamento dell'acqua per fotocatalisi solare" class="carousel__img" />
             <figcaption class="carousel__caption">Fotocatalisi Solare</figcaption>
           </figure>
 

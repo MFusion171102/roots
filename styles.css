@@ -481,13 +481,14 @@ a { text-decoration: none; color: inherit; }
 .card--energy {}
 
 .card__icon-wrap {
-  width: 64px; height: 64px;
+  width: 64px;
+  height: 64px;
   border-radius: var(--r-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   margin-bottom: .25rem;
+  font-size: 1.75rem; /* scales the FA icon */
 }
 
 .card__icon-wrap--solar  { background: #F0FAF0; }
