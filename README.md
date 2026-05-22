@@ -27,6 +27,12 @@ Il progetto è stato sviluppato interamente con tecnologie web standard, senza l
 *   **Iconografia:** [Phosphor Icons](https://phosphoricons.com/) e [Font Awesome](https://fontawesome.com/).
 *   **Integrazioni esterne:** Embed di progetti grafici interattivi (Canva).
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Font: Google Fonts](https://img.shields.io/badge/Fonts-Google_Fonts-4285F4?style=flat-square&logo=google&logoColor=white)
+![Icons: Phosphor](https://img.shields.io/badge/Icons-Phosphor-8B5CF6?style=flat-square)
+
 ---
 
 ## 📂 Struttura della Repository
