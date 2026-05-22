@@ -73,5 +73,8 @@ Il sito non richiede alcun processo di build o server backend per funzionare. Pe
 *   **Testi storici:** Gruppo Editor
 *   **Elaborati grafici:** Gruppo Visual Artists
 *   **Ricerca scientifica:** Gruppo Genetisti
+*   **Sito web:** Gruppo Informatici
+
+**Ringraziamenti speciali a:** Leandro Lucarelli, che alle 23:50 sta pushando sta roba su github.
 
 *Nota: Questo è un progetto scolastico a solo scopo didattico.*
