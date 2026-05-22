@@ -1,5 +1,5 @@
 /**
- * script.js — GreenChem Website
+ * script.js — Roots Website
  * Handles:
  *   1. Sidebar toggle (mobile)
  *   2. Image carousel (next/prev, dot nav, autoplay)

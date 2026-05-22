@@ -1,6 +1,6 @@
 /* ============================================================
-   styles.css — GreenChem Website
-   Design direction: Editorial organic-minimalism
+   styles.css — Radici: L'Immigrazione Italiana in America
+   Design direction: Editorial organic-minimalism (ereditato da GreenChem)
    Palette: Deep forest greens, warm cream, amber accents
    Fonts: Playfair Display (headings) + DM Sans (body)
    ============================================================ */
@@ -19,6 +19,14 @@
   --c-accent-xlt:  #B7E4C7;       /* pale mint */
   --c-amber:       #C77B1A;       /* warm amber accent */
   --c-amber-lt:    #F5CBA7;
+
+  /* Section-specific accent tints */
+  --c-storia:      #2A5298;       /* blue — storia/letteratura */
+  --c-storia-lt:   #D6E4FF;
+  --c-arte:        #7B3FA0;       /* purple — arte/fotografia */
+  --c-arte-lt:     #EDD9FF;
+  --c-genetica:    #1A6B5E;       /* teal — genetica/scienza */
+  --c-genetica-lt: #C5EFE8;
 
   /* Sidebar */
   --sidebar-w:     260px;
@@ -45,7 +53,7 @@
   --shadow-raise: 0 10px 40px rgba(0,0,0,.12);
 
   /* Transitions */
-  --tr:  .25s cubic-bezier(.4,0,.2,1);
+  --tr:      .25s cubic-bezier(.4,0,.2,1);
   --tr-slow: .45s cubic-bezier(.4,0,.2,1);
 }
 
@@ -70,7 +78,6 @@ a { text-decoration: none; color: inherit; }
 
 /* ── 2. Layout Shell ────────────────────────────────────────── */
 
-/* Sidebar is fixed on desktop; transforms off-screen on mobile */
 .sidebar {
   position: fixed;
   top: 0; left: 0;
@@ -86,20 +93,17 @@ a { text-decoration: none; color: inherit; }
   padding-bottom: 2rem;
 }
 
-/* Main content pushed right of sidebar on desktop */
 .main {
   margin-left: var(--sidebar-w);
   min-height: 100vh;
   transition: margin var(--tr-slow);
 }
 
-/* Footer also offset */
 .footer {
   margin-left: var(--sidebar-w);
   transition: margin var(--tr-slow);
 }
 
-/* Topbar hidden on desktop */
 .topbar { display: none; }
 
 /* ── 3. Sidebar Internals ───────────────────────────────────── */
@@ -173,7 +177,6 @@ a { text-decoration: none; color: inherit; }
 /* ── 4. Mobile Topbar ───────────────────────────────────────── */
 @media (max-width: 900px) {
 
-  /* Show topbar */
   .topbar {
     display: flex;
     align-items: center;
@@ -193,7 +196,6 @@ a { text-decoration: none; color: inherit; }
     font-size: 1.1rem;
   }
 
-  /* Sidebar slides in from left */
   .sidebar {
     transform: translateX(calc(-1 * var(--sidebar-w)));
     z-index: 400;
@@ -204,13 +206,11 @@ a { text-decoration: none; color: inherit; }
     box-shadow: 8px 0 40px rgba(0,0,0,.35);
   }
 
-  /* Main & footer not offset on mobile */
   .main, .footer {
     margin-left: 0;
     padding-top: var(--topbar-h);
   }
 
-  /* Overlay */
   .overlay {
     display: block;
     position: fixed;
@@ -229,7 +229,6 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (min-width: 901px) {
-  /* Overlay never shown on desktop */
   .overlay { display: none !important; }
 }
 
@@ -254,7 +253,6 @@ a { text-decoration: none; color: inherit; }
   transition: transform var(--tr), opacity var(--tr);
 }
 
-/* Animate burger → X when open */
 .topbar__toggle.is-open .burger span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -331,7 +329,6 @@ a { text-decoration: none; color: inherit; }
   padding: 5rem 4rem;
 }
 
-/* Noise texture overlay */
 .hero__noise {
   position: absolute;
   inset: 0;
@@ -340,7 +337,6 @@ a { text-decoration: none; color: inherit; }
   pointer-events: none;
 }
 
-/* Decorative radial blobs */
 .hero__orb {
   position: absolute;
   border-radius: 50%;
@@ -477,8 +473,8 @@ a { text-decoration: none; color: inherit; }
   box-shadow: var(--shadow-raise);
 }
 
-/* Energy cards */
-.card--energy {}
+/* Section navigation cards (homepage) */
+.card--section {}
 
 .card__icon-wrap {
   width: 64px;
@@ -488,15 +484,22 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: center;
   margin-bottom: .25rem;
-  font-size: 1.75rem; /* scales the FA icon */
+  font-size: 1.75rem;
 }
 
-.card__icon-wrap--solar  { background: #F0FAF0; }
-.card__icon-wrap--wind   { background: #EBF5FB; }
-.card__icon-wrap--biomass{ background: #F0FAF0; }
-.card__icon-wrap--hydrogen{ background: #F5EEF8; }
+/* Icon wrap color variants per section */
+.card__icon-wrap--storia   { background: var(--c-storia-lt);  color: var(--c-storia); }
+.card__icon-wrap--arte     { background: var(--c-arte-lt);    color: var(--c-arte); }
+.card__icon-wrap--genetica { background: var(--c-genetica-lt);color: var(--c-genetica); }
 
-.card__img-icon { width: 56px; height: 56px; object-fit: cover; border-radius: var(--r-sm); }
+/* Group label (es. "Editor", "Visual Artist", "Genetisti") */
+.card__group-label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
 
 .card__title {
   font-family: var(--ff-display);
@@ -517,13 +520,13 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   color: var(--c-accent);
   margin-top: auto;
-  transition: color var(--tr), gap var(--tr);
+  transition: color var(--tr);
 }
 
 .card__link:hover { color: var(--c-accent-lt); }
 
-/* Waste oil cards */
-.card--waste {
+/* Numbered cards (waste-style, riutilizzato per sottosezioni) */
+.card--numbered {
   border-top: 3px solid var(--c-accent);
 }
 
@@ -588,6 +591,7 @@ a { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   opacity: .85;
   margin-top: .2rem;
+  text-align: center;
 }
 
 /* Text side */
@@ -614,32 +618,6 @@ a { text-decoration: none; color: inherit; }
   font-size: .95rem;
   line-height: 1.75;
   margin-bottom: .5rem;
-}
-
-.principle-list {
-  margin: .75rem 0 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
-}
-
-.principle-list li {
-  display: flex;
-  align-items: center;
-  gap: .85rem;
-  font-size: .9rem;
-  color: var(--c-text);
-}
-
-.pl-num {
-  font-family: var(--ff-display);
-  font-size: .75rem;
-  font-weight: 700;
-  color: var(--c-amber);
-  background: var(--c-amber-lt);
-  padding: .15rem .5rem;
-  border-radius: var(--r-sm);
-  flex-shrink: 0;
 }
 
 /* ── 10. Carousel ───────────────────────────────────────────── */
@@ -737,7 +715,213 @@ a { text-decoration: none; color: inherit; }
   width: 22px;
 }
 
-/* ── 11. Footer ─────────────────────────────────────────────── */
+/* ── 11. Pull Quote ─────────────────────────────────────────── */
+
+.pull-quote {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.pull-quote__text {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-style: italic;
+  color: var(--c-text);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.pull-quote__text::before { content: '\201C'; }
+.pull-quote__text::after  { content: '\201D'; }
+
+.pull-quote__source {
+  font-size: .88rem;
+  color: var(--c-text-muted);
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+
+.pull-quote__source cite {
+  font-style: italic;
+  color: var(--c-accent);
+}
+
+/* ── 12. Content page prose (storia, genetica) ──────────────── */
+
+.prose-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+}
+
+.prose-section h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--c-text);
+  margin-top: 2.5rem;
+  margin-bottom: .75rem;
+  line-height: 1.25;
+}
+
+.prose-section h3 {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+.prose-section p {
+  color: var(--c-text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.prose-section ul,
+.prose-section ol {
+  margin: .75rem 0 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.prose-section ul { list-style: disc; }
+.prose-section ol { list-style: decimal; }
+
+.prose-section li {
+  color: var(--c-text-muted);
+  font-size: .95rem;
+  line-height: 1.7;
+}
+
+.prose-section strong { color: var(--c-text); }
+
+.prose-section blockquote {
+  border-left: 4px solid var(--c-accent-lt);
+  padding: .75rem 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--c-surface-2);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  font-style: italic;
+  color: var(--c-text);
+}
+
+/* Page hero (for inner pages) */
+.page-hero {
+  background: linear-gradient(135deg, #0D1F14 0%, #1A4028 60%, #0F2E1A 100%);
+  padding: 5rem 4rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero--storia  { background: linear-gradient(135deg, #0d1733 0%, #1a2e5a 60%, #0d1e3d 100%); }
+.page-hero--arte    { background: linear-gradient(135deg, #1e0d2e 0%, #3b1a5a 60%, #1e0d38 100%); }
+.page-hero--genetica{ background: linear-gradient(135deg, #0d2221 0%, #1a4a44 60%, #0d2e2a 100%); }
+
+.page-hero__noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  opacity: .5;
+  pointer-events: none;
+}
+
+.page-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.page-hero__eyebrow {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--c-accent-lt);
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--c-accent-lt);
+  padding-left: .75rem;
+}
+
+.page-hero__title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.page-hero__sub {
+  font-size: 1rem;
+  color: #a8c5b0;
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+/* ── 13. Arte page — iframe embed ───────────────────────────── */
+
+.canva-section {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.canva-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-raise);
+  background: #000;
+}
+
+.canva-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── 14. Mosaic image (genetica page) ───────────────────────── */
+
+.mosaic-section {
+  padding: 3rem 4rem 5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mosaic-section h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  margin-bottom: .75rem;
+  color: var(--c-text);
+}
+
+.mosaic-section p {
+  color: var(--c-text-muted);
+  font-size: .95rem;
+  margin-bottom: 2rem;
+}
+
+.mosaic-img {
+  width: 100%;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-raise);
+  object-fit: cover;
+}
+
+/* ── 15. Footer ─────────────────────────────────────────────── */
 
 .footer {
   background: var(--sidebar-bg);
@@ -799,46 +983,54 @@ a { text-decoration: none; color: inherit; }
   margin-top: .5rem;
 }
 
-/* ── 12. Responsive Breakpoints ─────────────────────────────── */
+/* ── 16. Responsive Breakpoints ─────────────────────────────── */
 
 @media (max-width: 1100px) {
-  .section { padding: 4rem 2.5rem; }
-  .body-section { padding: 4rem 2.5rem; gap: 2.5rem; }
-  .section--tinted { padding: 4rem 2.5rem; }
-  .cards--4 { grid-template-columns: repeat(2, 1fr); }
-  .footer { padding: 2.5rem; }
+  .section            { padding: 4rem 2.5rem; }
+  .body-section       { padding: 4rem 2.5rem; gap: 2.5rem; }
+  .section--tinted    { padding: 4rem 2.5rem; }
+  .cards--4           { grid-template-columns: repeat(2, 1fr); }
+  .footer             { padding: 2.5rem; }
+  .prose-section      { padding: 4rem 2.5rem; }
+  .canva-section      { padding: 3rem 2.5rem; }
+  .mosaic-section     { padding: 3rem 2.5rem 4rem; }
+  .page-hero          { padding: 4rem 2.5rem 3rem; }
 }
 
 @media (max-width: 860px) {
-  .hero { padding: 5rem 2rem 4rem; }
+  .hero               { padding: 5rem 2rem 4rem; }
   .body-section {
     grid-template-columns: 1fr;
     padding: 3.5rem 1.75rem;
   }
   .body-section__badge { right: .5rem; bottom: -1rem; }
-  .cards--3 { grid-template-columns: 1fr 1fr; }
-  .carousel__btn { display: none; } /* rely on dots on mobile */
+  .cards--3           { grid-template-columns: 1fr 1fr; }
+  .carousel__btn      { display: none; }
 }
 
 @media (max-width: 620px) {
-  .hero { padding: 4.5rem 1.25rem 3rem; }
-  .section { padding: 3.5rem 1.25rem; }
-  .section--tinted { padding: 3.5rem 1.25rem; }
-  .cards--4, .cards--3 { grid-template-columns: 1fr; }
-  .footer { padding: 2rem 1.25rem; }
-  .footer__nav { justify-content: flex-start; gap: 1rem; }
+  .hero               { padding: 4.5rem 1.25rem 3rem; }
+  .section            { padding: 3.5rem 1.25rem; }
+  .section--tinted    { padding: 3.5rem 1.25rem; }
+  .cards--4,
+  .cards--3           { grid-template-columns: 1fr; }
+  .footer             { padding: 2rem 1.25rem; }
+  .footer__nav        { justify-content: flex-start; gap: 1rem; }
+  .prose-section      { padding: 3rem 1.25rem; }
+  .canva-section      { padding: 2rem 1.25rem; }
+  .mosaic-section     { padding: 2rem 1.25rem 3rem; }
+  .page-hero          { padding: 3.5rem 1.25rem 2.5rem; }
+  .pull-quote         { padding: .5rem 1rem; }
 }
 
-/* ── 13. Utility ────────────────────────────────────────────── */
+/* ── 17. Utility ────────────────────────────────────────────── */
 
-/* Focus ring for keyboard accessibility */
 :focus-visible {
   outline: 2px solid var(--c-accent-lt);
   outline-offset: 3px;
   border-radius: var(--r-sm);
 }
 
-/* Visually hidden (a11y) */
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
