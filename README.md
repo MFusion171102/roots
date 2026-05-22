@@ -1,112 +1,77 @@
-# ✦ GreenChem — La Chimica per un Pianeta Vivo
+# ✦ Radici: L'Immigrazione Italiana in America
 
-> *"Una chimica che guarisce invece di nuocere."*
-
-Un sito web statico multi-pagina dedicato alla **chimica verde** — progettato con HTML5 semantico, CSS moderno e JavaScript vanilla. Nessun framework, nessun build tool, zero dipendenze.
+Un progetto multidisciplinare di Educazione Civica incentrato sul tema dell'emigrazione italiana verso gli Stati Uniti d'America tra la fine dell'Ottocento e l'inizio del Novecento. Realizzato dagli studenti della classe **V SC** (a.s. 2025–2026).
 
 ---
 
-## 🖼️ Anteprima
+## 📖 Descrizione del Progetto
 
-| Desktop | Mobile |
-|---|---|
-| Sidebar fissa + layout a griglia | Sidebar collassabile + topbar |
+Il sito web "Radici" nasce come contenitore digitale per raccogliere ed esporre i lavori di ricerca, analisi e creatività sviluppati da tre diversi gruppi di lavoro della classe. L'obiettivo è esplorare il fenomeno migratorio italo-americano attraverso lenti diverse: quella storica e letteraria, quella visiva e artistica, e infine quella prettamente scientifica.
+
+### Le Sezioni del Sito
+
+*   **📚 Storia (Gruppo Editor):** Un'analisi profonda dell'immigrazione attraverso la lente del romanzo *Vita* di Melania Mazzucco. La sezione ripercorre il duro viaggio verso l'America, lo shock di Ellis Island, le illusioni infrante dei migranti e la cruda realtà della Little Italy dei primi del Novecento, smantellando il "sogno americano".
+*   **🎨 Arte (Gruppo Visual Artists):** Un viaggio visivo interattivo che esplora l'evoluzione urbanistica e sociale di Little Italy ed Ellis Island. Tramite una presentazione interattiva integrata, l'elaborato mette a confronto le fotografie storiche delle strade brulicanti e povere del passato con il volto contemporaneo della metropoli.
+*   **🧬 Genetica (Gruppo Genetisti):** Una rigorosa decostruzione scientifica del concetto biologico di "razza" umana. Basata sugli studi di genetisti come Richard Lewontin e Luigi Luca Cavalli-Sforza, la sezione dimostra l'infondatezza delle divisioni razziali, culminando nel progetto visivo "Human Mosaic", simbolo dell'uguaglianza e della lotta alla discriminazione.
 
 ---
 
-## 📁 Struttura del progetto
+## 🛠️ Tecnologie Utilizzate
 
+Il progetto è stato sviluppato interamente con tecnologie web standard, senza l'uso di framework pesanti, per garantire massima accessibilità e velocità:
+
+*   **HTML5:** Strutturazione semantica dei contenuti.
+*   **CSS3:** Styling personalizzato basato su un Design System coerente (variabili CSS, Flexbox, CSS Grid, design responsivo).
+*   **JavaScript (Vanilla):** Gestione dell'interattività, in particolare per la navigazione mobile (sidebar e overlay).
+*   **Tipografia:** [Google Fonts](https://fonts.google.com/) (`Playfair Display` per i titoli, `DM Sans` per i testi).
+*   **Iconografia:** [Phosphor Icons](https://phosphoricons.com/) e [Font Awesome](https://fontawesome.com/).
+*   **Integrazioni esterne:** Embed di progetti grafici interattivi (Canva).
+
+---
+
+## 📂 Struttura della Repository
+
+```text
+/
+├── index.html          # Pagina principale (Home)
+├── storia.html         # Sezione storica e letteraria
+├── arte.html           # Sezione artistica e visiva
+├── genetica.html       # Sezione scientifica
+├── styles.css          # Foglio di stile principale
+├── script.js           # Script per le funzionalità UI (es. menu mobile)
+└── assets/             # Risorse statiche
+    ├── images/         # Immagini ottimizzate (es. .webp)
+    │   ├── opening-image.webp
+    │   ├── ellis-island.webp
+    │   ├── ellis-island2.webp
+    │   ├── father.webp
+    │   └── human-mosaic.webp
+    └── favicon/        # Icone per il browser e manifest
 ```
-greenchem/
-├── index.html       # Pagina principale (in italiano)
-├── styles.css       # Tutti gli stili — palette, layout, responsive
-└── script.js        # Sidebar toggle + carosello interattivo
-```
 
 ---
 
-## ✨ Funzionalità
+## 🚀 Come avviare il progetto localmente
 
-- **Sidebar di navigazione** fissa su desktop, collassabile su mobile con overlay
-- **Hero section** con gradiente, texture noise e blob animati
-- **Card informative** per fonti di energia sostenibile (Solare, Eolica, Biomassa, Idrogeno)
-- **Sezione editoriale** split-layout con badge flottante e lista dei principi chiave
-- **Carosello immagini** con controlli prev/next, dot navigation, autoplay e supporto swipe
-- **Card "Carburante dagli Oli Esausti"** in stile numerato
-- **Footer** completo con descrizione e link placeholder
+Il sito non richiede alcun processo di build o server backend per funzionare. Per visualizzarlo in locale:
 
----
-
-## 🎨 Scelte di design
-
-| Elemento | Scelta |
-|---|---|
-| **Stile** | Editorial organic-minimalism |
-| **Heading font** | Playfair Display (serif) |
-| **Body font** | DM Sans |
-| **Colore primario** | `#2D6A4F` — verde foresta profondo |
-| **Sfondo** | `#F7F5F0` — crema caldo |
-| **Accento** | `#C77B1A` — ambra calda |
-| **Sidebar** | `#0D1F14` — foresta quasi nera |
-
----
-
-## 🚀 Come avviare
-
-Non è richiesta alcuna installazione. Basta aprire il file direttamente nel browser:
-
+1. Clona questa repository:
 ```bash
-# Clona la repo
-git clone https://github.com/tuo-utente/greenchem.git
-cd greenchem
-
-# Apri nel browser (oppure usa un live server)
-open index.html
-```
-
-In alternativa, con [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) su VS Code:
-
-1. Apri la cartella del progetto
-2. Tasto destro su `index.html` → **"Open with Live Server"**
+   git clone [https://github.com/MFusion171102/roots.git](https://github.com/MFusion171102/roots.git)
+   ```
+2. Accedi alla cartella del progetto:
+```bash
+   cd roots
+   ```
+3. Apri il file `index.html` direttamente nel tuo browser web preferito, oppure utilizza un'estensione come **Live Server** su VS Code per godere dell'hot-reloading durante le modifiche.
 
 ---
 
-## 📱 Responsive
+## 👥 Crediti
 
-| Breakpoint | Comportamento |
-|---|---|
-| `> 900px` | Sidebar fissa a sinistra, contenuto offset di 260px |
-| `≤ 900px` | Sidebar nascosta, topbar fissa, toggle hamburger |
-| `≤ 620px` | Card in colonna singola, padding ridotto |
+**Autori:** Studenti della Classe V SC, Anno Scolastico 2025–2026.
+*   **Testi storici:** Gruppo Editor
+*   **Elaborati grafici:** Gruppo Visual Artists
+*   **Ricerca scientifica:** Gruppo Genetisti
 
----
-
-## ♿ Accessibilità
-
-- HTML5 semantico con landmark `<main>`, `<aside>`, `<nav>`, `<footer>`
-- Attributi `aria-label`, `aria-expanded`, `aria-selected` su tutti i controlli interattivi
-- Carosello con `role="region"`, `role="group"`, `role="tab"` e `role="tablist"`
-- Navigazione da tastiera (frecce ← → sul carosello, Escape per chiudere la sidebar)
-- Focus ring visibile per tutti gli elementi interattivi
-
----
-
-## 🛠️ Tecnologie
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Font: Google Fonts](https://img.shields.io/badge/Fonts-Google_Fonts-4285F4?style=flat-square&logo=google&logoColor=white)
-![Icons: Phosphor](https://img.shields.io/badge/Icons-Phosphor-8B5CF6?style=flat-square)
-
----
-
-## 📄 Licenza
-
-Distribuito sotto licenza **MIT**. Consulta il file `LICENSE` per i dettagli.
-
----
-
-<p align="center">
-  Fatto con 🌿 per un pianeta più verde &nbsp;·&nbsp; © 2026 GreenChem
-</p>
+*Nota: Questo è un progetto scolastico a solo scopo didattico.*

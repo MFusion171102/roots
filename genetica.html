@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genetica — Radici: L'Immigrazione Italiana in America</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png?v=20260424" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg?v=20260424" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico?v=20260424" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png?v=20260424" />
+  <meta name="apple-mobile-web-app-title" content="Roots" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest?v=20260424" />
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar" aria-label="Navigazione del sito">
+
+    <!-- Logo -->
+    <div class="sidebar__brand">
+      <span class="sidebar__leaf">✦</span>
+      <span class="sidebar__name">Radici</span>
+    </div>
+
+    <!-- Nav links -->
+    <nav class="sidebar__nav">
+      <ul>
+        <li class="sidebar__item">
+          <a href="index.html" class="sidebar__link">
+            <i class="ph ph-house-simple"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="storia.html" class="sidebar__link">
+            <i class="ph ph-book-open-text"></i>
+            <span>Storia</span>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="arte.html" class="sidebar__link">
+            <i class="ph ph-camera"></i>
+            <span>Arte</span>
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--active">
+          <a href="genetica.html" class="sidebar__link">
+            <i class="ph ph-dna"></i>
+            <span>Genetica</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar footer tag -->
+    <div class="sidebar__tagline">
+      <p>Un progetto di Educazione Civica<br/>— Classe V SC, a.s. 2025–2026.</p>
+    </div>
+
+  </aside>
+
+  <!-- ===================== MOBILE TOPBAR ===================== -->
+  <header class="topbar" role="banner">
+    <button class="topbar__toggle" id="sidebarToggle" aria-label="Apri/chiudi navigazione" aria-expanded="false">
+      <span class="burger" id="burgerIcon">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+    <span class="topbar__logo">✦ Radici</span>
+  </header>
+
+  <!-- ===================== OVERLAY ===================== -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main" id="main">
+
+    <!-- ── PAGE HERO ─────────────────────────────────────── -->
+    <section class="page-hero page-hero--genetica" aria-labelledby="heroHeading">
+      <div class="page-hero__noise"></div>
+      <div class="page-hero__inner">
+        <span class="page-hero__eyebrow">Sezione Genetica · Gruppo Genetisti</span>
+        <h1 class="page-hero__title" id="heroHeading">
+          La Falsa Concezione delle Razze Umane
+        </h1>
+        <p class="page-hero__sub">
+          L'analisi scientifica decostruisce il mito biologico della razza, promuovendo l'uguaglianza e fornendo gli strumenti per combattere la discriminazione.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CONTENUTO PROSA (Dal documento dei Genetisti) ──── -->
+    <section class="prose-section" aria-label="Contenuto della sezione genetica">
+      
+      <h2>Cos'è una Razza?</h2>
+      <p>
+        Dal punto di vista biologico e zoologico, la razza, spesso definita come sottospecie, rappresenta un raggruppamento di popolazioni appartenenti alla stessa specie che condividono un pool genico comune e caratteri morfologici o fisiologici ereditari distinti, mantenuti tali grazie a un isolamento geografico. Tuttavia, nella nostra specie, Homo sapiens, il concetto biologico di razza non è applicabile. A differenza di altre specie animali, come i cani che contano più di quattrocento razze create artificialmente attraverso accoppiamenti selettivi e rigide barriere riproduttive, gli esseri umani presentano caratteristiche genetiche che sfidano qualsiasi tentativo di categorizzazione rigida. Questa peculiarità della nostra specie è determinata principalmente da tre fattori biologici fondamentali che agiscono in modo combinato.
+      </p>
+
+      <p>
+        Il primo fattore risiede nell'elevata mobilità e nel continuo flusso genico che hanno caratterizzato la storia umana. Nel corso dei millenni, le diverse popolazioni si sono costantemente spostate, mescolate e accoppiate tra loro, impedendo quell'isolamento riproduttivo che è la condizione necessaria per la formazione di sottospecie distinte. A questo si aggiunge il fenomeno della variazione clinale, o continua. I tratti somatici umani, come il colore della pelle, la forma degli occhi o l'altezza, non cambiano in modo discontinuo o a salti netti, ma variano in modo graduale nello spazio geografico, rendendo impossibile tracciare un confine biologico oggettivo dove finisce un gruppo e ne inizia un altro. Infine, la paleontologia e la genetica evoluzionistica dimostrano che l'umanità moderna ha un'origine africana estremamente recente, datata tra i duecentomila e i trecentomila anni fa. Derivando da un piccolo gruppo ancestrale originario che si è poi diffuso nel resto del mondo secondo il modello Out of Africa, gli esseri umani moderni condividono un grado di omogeneità genetica straordinariamente elevato, di gran lunga superiore a quello riscontrabile tra gli scimpanzé o altri primati. Come spiega efficacemente il filosofo della scienza Telmo Pievani, le razze umane non esistono sia per ragioni geografiche, sia per ragioni di tempo, poiché la genetica moderna dimostra che sotto la pelle siamo tutti sorprendentemente simili.
+      </p>
+
+      <!-- SEZIONE CENTRALE HUMAN MOSAIC -->
+      <figure style="margin: 4rem 0; text-align: center;">
+        <img src="assets/images/human-mosaic.webp" alt="Human Mosaic - Volto umano composto da sezioni di volti di persone diverse" style="width: 100%; max-height: 550px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" />
+        <figcaption style="margin-top: 1.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #555; line-height: 1.5;">
+          <strong>Human Mosaic:</strong> Un volto unico composto dai tratti degli studenti del gruppo. Quest'opera simboleggia l'intrinseca unità della specie umana, decostruendo visivamente le barriere fenotipiche e ricordandoci l'importanza dell'uguaglianza contro ogni forma di discriminazione razziale.
+        </figcaption>
+      </figure>
+
+      <h2>L'Invenzione della Razza e la Propaganda</h2>
+      <p>
+        L'idea di suddividere l'umanità in razze non affonda le sue radici nella scienza, bensì nella storia coloniale e nella propaganda politica. Ottant'anni fa, in Italia, i direttori degli istituti superiori ricevettero una circolare del Ministero dell'Educazione Nazionale con la quale venivano invitati a diffondere la rivista La Difesa della Razza e ad assicurarsi che i suoi contenuti venissero assimilati dagli studenti. Questa pubblicazione divenne uno dei principali strumenti di propaganda razzista che il governo fascista utilizzò per giustificare e diffondere le leggi razziali del 1938.
+      </p>
+
+      <p>
+        Più in generale, l'invenzione delle razze umane si sviluppò soprattutto in corrispondenza delle grandi espansioni coloniali delle potenze europee, quando gli esploratori entrarono in contatto con popoli dall'aspetto e dalle culture differenti. Il fondamento teorico di questa catalogazione viene tradizionalmente attribuito a François Bernier, medico e viaggiatore francese che nel 1684 propose per la prima volta la divisione dell'umanità in quattro razze basate principalmente sulla geografia e sul colore della pelle, inaugurando una lunga tradizione di classificazione arbitraria della diversità umana.
+      </p>
+
+      <h2>Studi e Teorie</h2>
+      <p>
+        Il punto di svolta in questo percorso di smentita scientifica arrivò nel 1972, quando il genetista statunitense Richard Lewontin pubblicò un articolo fondamentale intitolato The Apportionment of Human Diversity. Attraverso l'analisi statistica dei polimorfismi proteici allora conosciuti, Lewontin dimostrò matematicamente che circa l'85% della variabilità genetica totale della nostra specie esiste all'interno di una stessa popolazione, come ad esempio tra individui dello stesso villaggio o della stessa nazione. Al contrario, solo l'8% circa separa popolazioni diverse appartenenti allo stesso continente, e appena il 7% residuo distingue i grandi gruppi continentali tra loro, ovvero quelli che la vecchia antropologia definiva razze. Questo significa che due individui presi a caso all'interno di una stessa comunità possono essere geneticamente più diversi tra loro di quanto lo siano due persone estratte da due continenti opposti.
+      </p>
+
+      <p>
+        I risultati di Lewontin, inizialmente accolti con scetticismo a causa dei limiti tecnici dell'epoca, trovarono una clamorosa e definitiva conferma negli anni Novanta grazie alle moderne tecniche di sequenziamento del DNA. Un ruolo cruciale in questo consolidamento fu svolto dall'antropologo e genetista italiano Luigi Luca Cavalli-Sforza, insieme a ricercatori come Guido Barbujani. Cavalli-Sforza, attraverso la mappatura dei geni umani su scala globale culminata nella monumentale opera Storia e geografia dei geni umani, dimostrò con precisione millimetrica la validità di quei dati, provando che la transizione dei caratteri genetici tra le popolazioni avviene per gradienti geografici continui e non per barriere nette. Analizzando decine di migliaia di tratti del genoma in popolazioni native di tutti i continenti, la comunità scientifica ha così blindato l'evidenza che l'85% della nostra diversità è interna a ogni singolo gruppo umano, mentre la variazione tra i continenti resta confinata a quel minimo 7% o 8% residuo. La razza nell'essere umano si rivela dunque una costruzione puramente culturale, sociale e politica, totalmente priva di qualsiasi fondamento o tassonomia biologica.
+      </p>
+
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">✦ Radici</span>
+        <p class="footer__desc">
+          Progetto di Educazione Civica — Immigrazione italiana in America.
+          Realizzato dagli studenti della classe V SC, a.s. 2025–2026.
+        </p>
+      </div>
+      <nav class="footer__nav" aria-label="Navigazione footer">
+        <a href="storia.html">Storia</a>
+        <a href="arte.html">Arte</a>
+        <a href="genetica.html">Genetica</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 — Lavoro scolastico a scopo didattico. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

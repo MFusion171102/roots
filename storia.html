@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storia — Radici: L'Immigrazione Italiana in America</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png?v=20260424" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg?v=20260424" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico?v=20260424" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png?v=20260424" />
+  <meta name="apple-mobile-web-app-title" content="Roots" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest?v=20260424" />
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar" aria-label="Navigazione del sito">
+
+    <!-- Logo -->
+    <div class="sidebar__brand">
+      <span class="sidebar__leaf">✦</span>
+      <span class="sidebar__name">Radici</span>
+    </div>
+
+    <!-- Nav links -->
+    <nav class="sidebar__nav">
+      <ul>
+        <li class="sidebar__item">
+          <a href="index.html" class="sidebar__link">
+            <i class="ph ph-house-simple"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--active">
+          <a href="storia.html" class="sidebar__link">
+            <i class="ph ph-book-open-text"></i>
+            <span>Storia</span>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="arte.html" class="sidebar__link">
+            <i class="ph ph-camera"></i>
+            <span>Arte</span>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="genetica.html" class="sidebar__link">
+            <i class="ph ph-dna"></i>
+            <span>Genetica</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar footer tag -->
+    <div class="sidebar__tagline">
+      <p>Un progetto di Educazione Civica<br/>— Classe V SC, a.s. 2025–2026.</p>
+    </div>
+
+  </aside>
+
+  <!-- ===================== MOBILE TOPBAR ===================== -->
+  <header class="topbar" role="banner">
+    <button class="topbar__toggle" id="sidebarToggle" aria-label="Apri/chiudi navigazione" aria-expanded="false">
+      <span class="burger" id="burgerIcon">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+    <span class="topbar__logo">✦ Radici</span>
+  </header>
+
+  <!-- ===================== OVERLAY ===================== -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main" id="main">
+
+    <!-- ── PAGE HERO ─────────────────────────────────────── -->
+    <!-- Utilizzo la classe specifica .page-hero--storia definita nel styles.css -->
+    <section class="page-hero page-hero--storia" aria-labelledby="heroHeading">
+      <div class="page-hero__noise"></div>
+      <div class="page-hero__inner">
+        <span class="page-hero__eyebrow">Sezione Storia · Gruppo Editor</span>
+        <h1 class="page-hero__title" id="heroHeading">
+          Tra Sogno e Realtà: Leggere l'Immigrazione
+        </h1>
+        <p class="page-hero__sub">
+          L'analisi del romanzo "Vita" di Melania Mazzucco ci guida attraverso la dura esperienza dell'emigrazione italiana verso gli Stati Uniti all'alba del Novecento.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CONTENUTO PROSA (Dal documento degli Editor) ──── -->
+    <section class="prose-section" aria-label="Contenuto della sezione storia">
+      
+      <h2>Il Viaggio verso l'America</h2>
+      <p>
+        Il romanzo <em>Vita</em> di Melania Mazzucco racconta l'esperienza dell'emigrazione italiana verso gli Stati Uniti all'inizio del Novecento, prendendo spunto dalla storia reale della famiglia dell'autrice. La storia si incentra su Vita, una bambina di nove anni e Diamante, un ragazzino dodicenne, che partono dall'Italia, precisamente da Tufo di Minturno per raggiungere il padre di lei, Agnello, emigrato anni prima a New York.
+      </p>
+
+      <figure style="margin: 2rem 0;">
+        <img src="assets/images/opening-image.webp" alt="Rappresentazione della partenza degli immigrati" class="mosaic-img" style="max-height: 450px; object-position: center;" />
+      </figure>
+
+      <p>
+        Nel libro il viaggio verso l'America è lungo, duro. Gli emigranti viaggiavano stipati nelle stive delle navi, in condizioni igieniche molto difficili. Molti lasciavano i loro paesi senza sapere se sarebbero mai tornati. Per Vita e Diamante il viaggio significa separarsi dalla propria terra, dalla famiglia e dall'infanzia.
+      </p>
+
+      <h2>Il Primo Ostacolo: Ellis Island</h2>
+      <p>
+        L'arrivo a Ellis Island simboleggia l'inizio della loro "nuova vita". Questa è l'isola davanti a New York che tra il 1892 e il 1954 fu il principale centro di ingresso degli immigrati negli Stati Uniti, attraversata da milioni di persone tra italiani, scozzesi ecc. Dopo il lungo viaggio in nave, Vita, Diamante e gli altri immigranti arrivano finalmente nel porto di New York, ma prima di entrare negli Stati Uniti devono fermarsi a Ellis Island per affrontare il centro di controllo.
+      </p>
+
+      <figure style="margin: 2rem 0;">
+        <img src="assets/images/ellis-island.webp" alt="Struttura storica di Ellis Island" class="mosaic-img" style="max-height: 450px; object-position: center;" />
+      </figure>
+
+      <blockquote>
+        "Ieri, 12 aprile 1903, dodicimilaseicentosessantotto persone sono sbarcate sull'isola. Solo dalla loro nave, il Republica, sono scesi in duemiladuecentouno."
+        <br/><cite>— Capitolo: "Good for father"</cite>
+      </blockquote>
+
+      <p>
+        L'approdo a Ellis Island segna il primo grande shock: Vita arriva debilitata e febbricitante dopo la traversata e osserva il salone pieno di emigranti e parenti che si cercano: uomini poverissimi, facce dure, gente stanca e disperata. In questo caos emerge subito il contrasto tra il sogno americano e la realtà concreta della povertà. 
+      </p>
+
+      <figure style="margin: 2rem 0;">
+        <img src="assets/images/ellis-island-2.webp" alt="Controlli medici e code a Ellis Island" class="mosaic-img" style="max-height: 450px; object-position: center;" />
+      </figure>
+
+      <p>
+        Quando arrivano a Ellis Island, gli immigrati vengono sottoposti a controlli medici e interrogatori. Gli americani volevano verificare che fossero sani, capaci di lavorare e non considerati "pericolosi" o troppo poveri. Bastava poco per una malattia, un errore nei documenti o una risposta sbagliata per essere respinti e rimandati indietro. Le persone aspettano in fila per ore, non comprendono bene la lingua, e hanno paura di perdere tutto dopo il viaggio affrontato.
+      </p>
+
+      <h2>Le Illusioni Infrante</h2>
+      <p>
+        Uno degli aspetti più importanti di questa scena è l'immaginazione di Vita: la bambina ha sempre immaginato il padre lontano come elegante, ricco, quasi aristocratico. Nella sua fantasia lui dovrebbe arrivare "con lo yacht", trattarla come una principessa e riconoscerla immediatamente. Questa fantasia infantile mostra quanto l'America sia stata costruita, nella mente degli emigranti, come luogo mitico di ricchezza e riscatto.
+      </p>
+
+      <blockquote>
+        "...questo tizio con la scucchia è suo padre."
+        <br/><cite>— Capitolo: "Good for father"</cite>
+      </blockquote>
+
+      <p>
+        La realtà, però, distrugge questa immagine. Il padre appare povero, trasandato, sudato, vestito male. Vita inizialmente non vuole riconoscerlo: prova vergogna, paura e delusione. Il momento è importante perché la bambina comprende improvvisamente che l'America non ha trasformato suo padre in un signore; lo ha invece consumato e impoverito. Inoltre, il padre stesso fatica a riconoscere la figlia: la guarda a lungo, come se cercasse nei lineamenti della bambina un ricordo lontano, un dettaglio che sottolinea la frattura prodotta dall'emigrazione nelle famiglie.
+      </p>
+
+      <figure style="margin: 2rem 0;">
+        <img src="assets/images/father.webp" alt="Rappresentazione di un padre consumato dal lavoro" class="mosaic-img" style="max-height: 450px; object-position: center;" />
+      </figure>
+
+      <blockquote>
+        "l'ha guardata a lungo (...) ma non l'ha riconosciuta."
+        <br/><cite>— Capitolo: "Good for father"</cite>
+      </blockquote>
+
+      <h2>La Realtà di Little Italy: Pregiudizi e Sopravvivenza</h2>
+      <p>
+        Anche Diamante vive l'arrivo come un'esperienza decisiva. Lui è più duro, più silenzioso e orgoglioso rispetto a Vita, e fin da subito capisce che per sopravvivere dovrà adattarsi alla violenza e alla precarietà della vita americana. New York non appare come una città luminosa, ma come un luogo sporco, sovraffollato e aggressivo, dominato dalla fame, dallo sfruttamento e dalla criminalità della Little Italy dei primi del Novecento. La pensione di Prince Street dove i due vengono accolti è simbolica: è un microcosmo dell'emigrazione italiana, pieno di personaggi disperati, lavoratori sfruttati e piccoli criminali dove i ragazzi iniziano la loro educazione alla sopravvivenza.
+      </p>
+
+      <p>
+        Gli americani guardavano spesso gli italiani con disprezzo, li definivano <em>DAGO</em> (nel libro si spiegava come un insulto verso chi era peggio di un cavallo con problemi intestinali). Gli immigrati del Sud Italia erano considerati sporchi, ignoranti, violenti o criminali. I bambini ereditavano immediatamente questo pregiudizio: erano poverissimi, parlavano poco inglese e vivevano nei quartieri sovraffollati, per questo venivano facilmente sfruttati e raramente protetti, imparando presto che valgono meno degli altri e che devono sopravvivere con astuzia, obbedienza o durezza.
+      </p>
+
+      <h3>Oltre il Mito Americano</h3>
+      <p>
+        I lavori che svolgevano erano spesso pesanti, pericolosi e mal pagati, come lustrascarpe nelle strade, venditori ambulanti, garzoni nei negozi, operai nelle fabbriche tessili. Diamante lavora in ambienti degradati e violenti dove i bambini vengono trattati quasi come adulti, entra in contatto con criminalità e non è protetto da nessuno. Anche Vita, crescendo, è esposta alla povertà, lavorando spesso come domestica, sarta o operaia.
+      </p>
+
+      <p>
+        Attraverso gli occhi di Vita e Diamante, l'America dipinta nel romanzo perde ogni sua aura mitica, rivelando così ciò che è stata storicamente per i migranti: non il sogno americano, ma una realtà di pregiudizi e discriminazioni. Questi elementi segneranno profondamente la loro esperienza e hanno caratterizzato il viaggio di intere comunità di persone che, convinte di andare a trovare la fortuna, hanno trovato invece un muro di preclusioni ed opportunità mancate.
+      </p>
+
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">✦ Radici</span>
+        <p class="footer__desc">
+          Progetto di Educazione Civica — Immigrazione italiana in America.
+          Realizzato dagli studenti della classe V SC, a.s. 2025–2026.
+        </p>
+      </div>
+      <nav class="footer__nav" aria-label="Navigazione footer">
+        <a href="storia.html">Storia</a>
+        <a href="arte.html">Arte</a>
+        <a href="genetica.html">Genetica</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 — Lavoro scolastico a scopo didattico. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
