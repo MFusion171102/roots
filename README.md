@@ -43,6 +43,7 @@ Il progetto è stato sviluppato interamente con tecnologie web standard, senza l
 ├── storia.html         # Sezione storica e letteraria
 ├── arte.html           # Sezione artistica e visiva
 ├── genetica.html       # Sezione scientifica
+├── crediti.html        # Crediti del sito
 ├── styles.css          # Foglio di stile principale
 ├── script.js           # Script per le funzionalità UI (es. menu mobile)
 └── assets/             # Risorse statiche
@@ -76,7 +77,7 @@ Il sito non richiede alcun processo di build o server backend per funzionare. Pe
 ## 👥 Crediti
 
 **Autori:** Studenti della Classe V SC, Anno Scolastico 2025–2026.
-*   **Testi storici:** Gruppo Editor
+*   **Testi storici e romanzo "Vita":** Gruppo Editor
 *   **Elaborati grafici:** Gruppo Visual Artists
 *   **Ricerca scientifica:** Gruppo Genetisti
 *   **Sito web:** Gruppo Informatici
