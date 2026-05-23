@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crediti — Radici</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png?v=20260424" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg?v=20260424" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico?v=20260424" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png?v=20260424" />
+  <meta name="apple-mobile-web-app-title" content="Roots" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest?v=20260424" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <!-- Open Graph Meta Tags per WhatsApp -->
   <meta property="og:title" content="Radici — L'Immigrazione Italiana in America" />
@@ -13,54 +20,104 @@
   <meta property="og:url" content="https://mfusion171102.github.io/roots/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Radici" />
+  <style>
+    /* Stili easter egg */
+    .ee-star {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 18px;
+      color: #2c3e50;
+      transition: color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+      transform-origin: center center; 
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      font-size: 2.5rem;
+    }
+    
+    .ee-star:hover {
+      color: #2d6a4f;
+      transform: scale(1.1);
+    }
+
+    /* Classe per la rotazione */
+    .ee-star.is-spinning {
+      animation: star-spin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes star-spin {
+      0% { transform: scale(1.1) rotate(0deg); }
+      100% { transform: scale(1.1) rotate(360deg); }
+    }
+    
+    /* Stato finale dorato */
+    .ee-star.unlocked {
+      color: #e6c25e !important;
+    }
+
+    /* Elementi nascosti all'inizio */
+    .nickname, .secret-member {
+      display: none;
+    }
+    
+    /* Supporto per il bold per me e Marco */
+    .ee-bold {
+      font-weight: 800;
+    }
+  </style>
 </head>
 <body style="background-color: #fcfcfc; color: #333; font-family: 'DM Sans', sans-serif; padding: 40px 20px; line-height: 1.6;">
 
   <main style="max-width: 800px; margin: 0 auto;">
-    <h1 style="font-family: 'Playfair Display', serif; margin-bottom: 2rem;">Crediti del Progetto</h1>
+    <h1 style="font-family: 'Playfair Display', serif; margin-bottom: 2rem; display: flex; align-items: center;">
+      <span class="ee-star" id="easter-egg-trigger">✦</span> Crediti del Progetto
+    </h1>
     <p>Il progetto "Uda Biodiversità e Modulo orientamento - Ed. Civica NY e Migrazione " è stato realizzato dagli studenti della classe <strong>V SC</strong> del liceo scientifico statale Vito Volterra, a.s. 2025–2026. Un ringraziamento speciale a tutti i membri dei gruppi di lavoro:</p>
 
     <div style="margin-top: 2rem;">
       <h3 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 5px;">GRUPPO EDITOR E "VITA"</h3>
       <ul>
         <li>Beatrice Valle</li>
-        <li>Francesco Forte detto "La bestia di Kasamatsu"</li>
+        <li>Francesco Forte<span class="nickname"> detto "La bestia di Kasamatsu"</span></li>
         <li>Silvia Pinna</li>
-        <li>Valerio Maria Rovagna detto "Il Master"</li>
+        <li>Valerio Maria Rovagna<span class="nickname"> detto "Il Master"</span></li>
       </ul>
 
       <h3 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 2rem;">GRUPPO GENETISTI</h3>
       <ul>
         <li>Letizia de Nicola</li>
         <li>Flavia Mantini</li>
-        <li>Francesco Felici detto "Il Puzzone"</li>
-        <li>Filippo Felici detto "Il Magno"</li>
+        <li>Francesco Felici<span class="nickname"> detto "Il Puzzone"</span></li>
+        <li>Filippo Felici<span class="nickname"> detto "Il Magno"</span></li>
         <li>Giulio Sgarra</li>
         <li>Giorgia di Lembo</li>
-        <li>Adriano Avizzano detto "Piccirillo"</li>
+        <li>Adriano Avizzano<span class="nickname"> detto "Piccirillo"</span></li>
       </ul>
 
       <h3 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 2rem;">GRUPPO VISUAL EDITOR</h3>
       <ul>
-        <li>Alessio Calvieri detto "cu"</li>
+        <li>Alessio Calvieri<span class="nickname"> detto "cu"</span></li>
         <li>Alex Rey Nicosia</li>
         <li>Sandro Landi</li>
-        <li class="platinum-style">Riccardo Scognamillo</li>
-        <li>Simone Ippolito detto "Mani magiche"</li>
+        <li class="secret-member" data-class="platinum-style">Riccardo Scognamillo</li>
+        <li>Simone Ippolito<span class="nickname"> detto "Mani magiche"</span></li>
         <li>Diana Truffarelli</li>
-        <li>Giuseppe Cordioli detto "Il ramarro cornuto"</li>
+        <li>Giuseppe Cordioli<span class="nickname"> detto "Il ramarro cornuto"</span></li>
         <li>Marco Flavio Ingrosso</li>
         <li>Santiago Ruscica</li>
       </ul>
 
       <h3 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 2rem;">GRUPPO INFORMATICI</h3>
       <ul>
-        <li class="golden-boss"><strong>Leandro Lucarelli detto "Il Boss"</strong></li>
-        <li class="platinum-style">Andrea Vilella</li>
+        <li id="member-leandro">Leandro Lucarelli<span class="nickname"> detto "Il Boss"</span></li>
+        <li class="secret-member" data-class="platinum-style">Andrea Vilella</li>
         <li>Leonardo Nagni</li>
         <li>Flavio Iafolla</li>
-        <li class="nostalgic"><strong>Marco Tiberi detto "Il Buddista"</strong></li>
-        <li>Jacopo Brandi detto "Brandoni"</li>
+        <li id="member-marco">Marco Tiberi<span class="nickname"> detto "Il Buddista"</span></li>
+        <li>Jacopo Brandi<span class="nickname"> detto "Brandoni"</span></li>
         <li>Edoardo Toselli</li>
       </ul>
     </div>
@@ -70,5 +127,6 @@
     </div>
   </main>
 
+  <script src="easteregg.js"></script>
 </body>
 </html>
