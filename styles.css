@@ -1043,17 +1043,52 @@ a { text-decoration: none; color: inherit; }
 
 /* Effetto dorato "Il Boss" */
 .golden-boss {
-  background: linear-gradient(90deg, #b8860b, #e6c25e, #b8860b, #d4af37, #b8860b);
+  background: linear-gradient(
+    90deg, 
+    #b8860b 5%, 
+    #fdfd96 10%, 
+    #e6c25e 30%, 
+    #d4af37 50%, 
+    #e6c25e 70%, 
+    #fdfd96 80%, 
+    #b8860b 95%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: 800;
-  text-shadow: 0 0 4px rgba(184, 134, 11, 0.3);
+  text-shadow: 0 1px 1px rgba(184, 134, 11, 0.4);
   animation: shine 8s infinite linear;
   background-size: 300% auto;
 }
 
 @keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+/* Effetto Platino */
+.platinum-style {
+  background: linear-gradient(
+    90deg, 
+    #777 5%, 
+    #ddd 10%, 
+    #aaa 30%, 
+    #bbb 50%, 
+    #aaa 70%, 
+    #ddd 80%, 
+    #777 95%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  animation: shine-platinum 8s infinite linear;
+  background-size: 300% auto;
+}
+
+@keyframes shine-platinum {
   0% { background-position: 0% center; }
   100% { background-position: 300% center; }
 }
