@@ -43,7 +43,7 @@
 }
 
 .plain-link {
-    color: inherit;          /* Uses the surrounding text color */
+    color: inherit;
     text-decoration: underline;
 }
 
