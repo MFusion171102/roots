@@ -41,3 +41,14 @@
 .ee-bold {
   font-weight: 800;
 }
+
+.plain-link {
+    color: inherit;          /* Uses the surrounding text color */
+    text-decoration: underline;
+}
+
+.plain-link:visited,
+.plain-link:hover,
+.plain-link:active {
+    color: inherit;
+}
