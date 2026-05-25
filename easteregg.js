@@ -94,3 +94,37 @@ function avviaCoriandoli() {
     }, durata);
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const triggerText = document.querySelector('span[class="nickname"]:-soup-contains("Ratti acidi")') || 
+                        Array.from(document.querySelectorAll('.nickname')).find(el => el.textContent.includes('Ratti acidi'));
+    
+    const modal = document.getElementById('video-modal');
+    const video = document.getElementById('diana-video');
+    const closeBtn = document.getElementById('close-modal');
+
+    if (triggerText) {
+        triggerText.style.cursor = 'pointer';
+        triggerText.style.textDecoration = 'underline';
+        
+        triggerText.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            video.play();
+        });
+    }
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        video.pause();
+        video.currentTime = 0;
+    });
+
+    // Chiudi cliccando fuori dal video
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+});

@@ -80,6 +80,18 @@
     </div>
   </main>
 
+  <!-- Modale Video -->
+  <div id="video-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+      <div style="position: relative; width: 90%; max-width: 600px;">
+          <span id="close-modal" style="position: absolute; top: -30px; right: 0; color: white; cursor: pointer; font-size: 20px;">Chiudi &times;</span>
+          <video id="diana-video" controls style="width: 100%; border-radius: 8px;">
+              <source src="assets/videos/DianaPong.webm" type="video/webm">
+              Il tuo browser non supporta il tag video.
+          </video>
+      </div>
+  </div>
+
+
   <script src="easteregg.js"></script>
 </body>
 </html>
