@@ -39,7 +39,22 @@ function attivaEasterEgg() {
   const marco = document.getElementById('member-marco');
   marco.classList.add('nostalgic', 'ee-bold');
 
-  // 4. Lancio di coriandoli
+  // 4. Attiva il trigger "Ratti acidi" ORA che il soprannome è visibile
+  const triggerText = document.getElementById('ratti-acidi-trigger');
+  
+  if (triggerText) {
+    triggerText.style.cursor = 'pointer';
+    triggerText.style.textDecoration = 'underline';
+  
+    triggerText.addEventListener('click', () => {
+      const modal = document.getElementById('video-modal');
+      const video = document.getElementById('diana-video');
+      modal.style.display = 'flex';
+      video.play();
+    });
+  }
+
+  // 5. Lancio di coriandoli
   avviaCoriandoli();
 }
 
@@ -96,35 +111,21 @@ function avviaCoriandoli() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const triggerText = document.querySelector('span[class="nickname"]:-soup-contains("Ratti acidi")') || 
-                        Array.from(document.querySelectorAll('.nickname')).find(el => el.textContent.includes('Ratti acidi'));
-    
-    const modal = document.getElementById('video-modal');
-    const video = document.getElementById('diana-video');
-    const closeBtn = document.getElementById('close-modal');
+  const modal = document.getElementById('video-modal');
+  const video = document.getElementById('diana-video');
+  const closeBtn = document.getElementById('close-modal');
 
-    if (triggerText) {
-        triggerText.style.cursor = 'pointer';
-        triggerText.style.textDecoration = 'underline';
-        
-        triggerText.addEventListener('click', () => {
-            modal.style.display = 'flex';
-            video.play();
-        });
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    video.pause();
+    video.currentTime = 0;
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      video.pause();
+      video.currentTime = 0;
     }
-
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Chiudi cliccando fuori dal video
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            video.pause();
-            video.currentTime = 0;
-        }
-    });
+  });
 });
